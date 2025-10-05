@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <div className="text-bg-primary py-5">
+    <div className="bg-primary text-light py-5">
       <footer className="container-fluid">
         <div className="row">
           <div className="col-xxxl-10 offset-xxxl-1">
             <div className="row g-3">
               <div className="col-xxl-6">
                 <a
-                  className="link-body-emphasis"
+                  className="link-light"
                   rel="noopener"
                   href="https://github.com/gocemitevski/visokoobrazovni-ustanovi"
                 >
@@ -15,7 +15,7 @@ export default function Footer() {
                 </a>{" "}
                 е достапен на GitHub под лиценцата „
                 <a
-                  className="link-body-emphasis"
+                  className="link-light"
                   rel="noopener"
                   href="https://github.com/gocemitevski/visokoobrazovni-ustanovi?tab=GPL-3.0-1-ov-file"
                 >
@@ -26,7 +26,7 @@ export default function Footer() {
               <div className="col-xxl-6 text-xxl-end">
                 Изработено од{" "}
                 <a
-                  className="link-body-emphasis"
+                  className="link-light"
                   rel="noopener"
                   href="https://www.gocemitevski.com/"
                 >
