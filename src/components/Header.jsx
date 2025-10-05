@@ -28,11 +28,11 @@ export default function Header() {
                     href="https://mon.gov.mk/mk-MK/dokumenti/lista-na-aktivni-registri"
                     rel="nofollow"
                   >
-                    Регистар на високообразовни установи во Република Северна
-                    Македонија
+                    Регистарот на високообразовни установи
                   </a>{" "}
                   на Министерство за образование и наука на Република Северна
-                  Македонија, со <strong>прочистени и збогатени податоци</strong>.
+                  Македонија, со{" "}
+                  <strong>прочистени и збогатени податоци</strong>.
                 </p>
               </div>
               <div className="col-xxxl-4 offset-xxxl-2 vstack">
