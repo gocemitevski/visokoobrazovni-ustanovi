@@ -45,7 +45,7 @@ export default function Table({ tableData }) {
           <table className="table table-striped">
             <thead className="sticky-top">
               <tr>
-                <td className="col-xl-2 pb-0 border-0" scope="col">
+                <td className="col-xl-2 pb-1 border-0" scope="col">
                   <Card
                     data={results}
                     filters={filters}
@@ -54,7 +54,7 @@ export default function Table({ tableData }) {
                     titlePlural={`Високообразовни установи`}
                   />
                 </td>
-                <td className="col-xl-2 pb-0 border-0" scope="col">
+                <td className="col-xl-2 pb-1 border-0" scope="col">
                   <Card
                     data={results}
                     filters={filters}
@@ -63,7 +63,7 @@ export default function Table({ tableData }) {
                     titlePlural={`Универзитетски единици`}
                   />
                 </td>
-                <td className="col-xl-2 pb-0 border-0" scope="col">
+                <td className="col-xl-2 pb-1 border-0" scope="col">
                   <Card
                     data={results}
                     filters={filters}
@@ -72,7 +72,7 @@ export default function Table({ tableData }) {
                     titlePlural={`Градови`}
                   />
                 </td>
-                <td className="col-xl-2 pb-0 border-0" scope="col">
+                <td className="col-xl-2 pb-1 border-0" scope="col">
                   <Card
                     data={results}
                     filters={filters}
@@ -81,7 +81,7 @@ export default function Table({ tableData }) {
                     titlePlural={`Типови`}
                   />
                 </td>
-                <td className="col-xl-2 pb-0 border-0" scope="col">
+                <td className="col-xl-2 pb-1 border-0" scope="col">
                   <Card
                     data={results}
                     filters={filters}
