@@ -208,8 +208,9 @@ export default function Table({ tableData }) {
                     <div className="hstack gap-3">
                       <i className="bi bi-exclamation-square"></i>
                       <p className="mb-0">
-                        Не постојат лиценци за внесените параметри или сте
-                        направиле некоја грешка при пребарувањето.
+                        Не постојат високообразовни установи за внесените
+                        параметри или пак, сте направиле некоја грешка при
+                        пребарувањето.
                       </p>
                     </div>
                   </td>
