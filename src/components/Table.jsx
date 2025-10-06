@@ -132,7 +132,7 @@ export default function Table({ tableData }) {
                             title={
                               filters[filter].length
                                 ? `Отстрани филтер`
-                                : `Внесете вредност за да можете да ја избришете`
+                                : `Изберете вредност за да можете да ја избришете`
                             }
                             onClick={() =>
                               setFilters({
