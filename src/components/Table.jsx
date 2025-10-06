@@ -11,6 +11,7 @@ export default function Table({ tableData }) {
     "Статус на високообразовната установа": "",
     "Вид на високообразовната установа": "",
     "Мрежно место": "",
+    Пребарување: "",
   });
   const [filteredData, setFilteredData] = useState([]);
 
@@ -19,19 +20,28 @@ export default function Table({ tableData }) {
   };
 
   const results = useMemo(() => {
-    return filteredData.filter((row) =>
-      Object.keys(filters).every((column) => {
-        if (!filters[column]) return true; // If filter is empty, include the row
-        return (
-          row[column] &&
-          row[column]
-            .toString()
-            .trim()
-            .toLowerCase()
-            .includes(filters[column].trim().toLowerCase())
-        );
-      })
-    );
+    if (filters[Object.keys(filters)[7]]) {
+      return filteredData.filter((item) => {
+        return Object.values(item)
+          .toString()
+          .toLowerCase()
+          .includes(filters[Object.keys(filters)[7]].trim().toLowerCase());
+      });
+    } else {
+      return filteredData.filter((row) =>
+        Object.keys(filters).every((column) => {
+          if (!filters[column]) return true; // If filter is empty, include the row
+          return (
+            row[column] &&
+            row[column]
+              .toString()
+              .trim()
+              .toLowerCase()
+              .includes(filters[column].trim().toLowerCase())
+          );
+        })
+      );
+    }
   }, [filteredData, filters]);
 
   useEffect(() => {
@@ -44,6 +54,49 @@ export default function Table({ tableData }) {
         <div className="table-responsive-md">
           <table className="table table-striped">
             <thead className="sticky-top">
+              <tr>
+                <td colSpan={8} className="pb-1 border-0" scope="col">
+                  <form>
+                    <div className="input-group flex-fill">
+                      <input
+                        id={`search`}
+                        className="form-control form-control-lg"
+                        type="text"
+                        placeholder="Пребарајте..."
+                        onChange={(e) => searchData(e, Object.keys(filters)[7])}
+                        value={filters[Object.keys(filters)[7]]}
+                      ></input>
+                      <button
+                        className="btn btn-outline-secondary"
+                        type="reset"
+                        title={
+                          filters[Object.keys(filters)[7]].length
+                            ? `Избришете`
+                            : `Внесете вредност за да можете да ја избришете`
+                        }
+                        onClick={() =>
+                          setFilters({
+                            ...filters,
+                            [Object.keys(filters)[7]]: "",
+                          })
+                        }
+                        disabled={!filters[Object.keys(filters)[7]].length}
+                      >
+                        <i className="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <div class="form-text">
+                      Пребарајте низ сите високообразовни установи во регистарот
+                      со едноставни поими како:{" "}
+                      <em>
+                        информатика, Скопје, архитектура, јавна, приватна,
+                        институт
+                      </em>{" "}
+                      и сл.
+                    </div>
+                  </form>
+                </td>
+              </tr>
               <tr>
                 <td className="col-xl-2 pb-1 border-0" scope="col">
                   <Card
@@ -100,13 +153,14 @@ export default function Table({ tableData }) {
                         <label htmlFor={filter} className="form-label">
                           {filter}
                         </label>
-                        <div className="input-group">
+                        <div className="input-group mb-2">
                           <select
                             className={`form-select ${
                               filters[filter].length > 0 ? `is-valid` : ``
                             }`}
                             placeholder={placeholder}
                             id={filter}
+                            disabled={filters[Object.keys(filters)[7]]}
                             onChange={(e) => searchData(e, filter)}
                             value={filters[filter]}
                           >
@@ -140,7 +194,10 @@ export default function Table({ tableData }) {
                                 [filter]: "",
                               })
                             }
-                            disabled={!filters[filter].length}
+                            disabled={
+                              !filters[filter].length ||
+                              filters[Object.keys(filters)[7]]
+                            }
                           >
                             <i className="bi bi-x-lg"></i>
                           </button>
