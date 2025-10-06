@@ -66,24 +66,26 @@ export default function Table({ tableData }) {
                         onChange={(e) => searchData(e, Object.keys(filters)[7])}
                         value={filters[Object.keys(filters)[7]]}
                       ></input>
-                      <button
-                        className="btn btn-outline-secondary"
-                        type="reset"
-                        title={
-                          filters[Object.keys(filters)[7]].length
-                            ? `Избришете`
-                            : `Внесете вредност за да можете да ја избришете`
-                        }
-                        onClick={() =>
-                          setFilters({
-                            ...filters,
-                            [Object.keys(filters)[7]]: "",
-                          })
-                        }
-                        disabled={!filters[Object.keys(filters)[7]].length}
-                      >
-                        <i className="bi bi-x-lg"></i>
-                      </button>
+                      {filters[Object.keys(filters)[7]] && (
+                        <button
+                          className="btn btn-outline-secondary"
+                          type="reset"
+                          title={
+                            filters[Object.keys(filters)[7]]
+                              ? `Избришете`
+                              : `Внесете вредност за да можете да ја избришете`
+                          }
+                          onClick={() =>
+                            setFilters({
+                              ...filters,
+                              [Object.keys(filters)[7]]: "",
+                            })
+                          }
+                          disabled={!filters[Object.keys(filters)[7]]}
+                        >
+                          <i className="bi bi-x-lg"></i>
+                        </button>
+                      )}
                     </div>
                     <div class="form-text mx-3 pt-2">
                       Пребарајте низ сите високообразовни установи во регистарот
@@ -180,27 +182,25 @@ export default function Table({ tableData }) {
                                   )
                               )}
                           </select>
-                          <button
-                            className="btn btn-outline-secondary"
-                            type="button"
-                            title={
-                              filters[filter].length
-                                ? `Отстрани филтер`
-                                : `Изберете вредност за да можете да ја избришете`
-                            }
-                            onClick={() =>
-                              setFilters({
-                                ...filters,
-                                [filter]: "",
-                              })
-                            }
-                            disabled={
-                              !filters[filter].length ||
-                              filters[Object.keys(filters)[7]]
-                            }
-                          >
-                            <i className="bi bi-x-lg"></i>
-                          </button>
+                          {filters[filter] && (
+                            <button
+                              className="btn btn-outline-secondary"
+                              type="button"
+                              title={
+                                filters[filter].length
+                                  ? `Отстрани филтер`
+                                  : `Изберете вредност за да можете да ја избришете`
+                              }
+                              onClick={() =>
+                                setFilters({
+                                  ...filters,
+                                  [filter]: "",
+                                })
+                              }
+                            >
+                              <i className="bi bi-x-lg"></i>
+                            </button>
+                          )}
                         </div>
                       </th>
                     )
