@@ -8,7 +8,7 @@ export default function Header() {
       <header className="container-fluid">
         <div className="row">
           <div className="col-xxxl-10 offset-xxxl-1">
-            <div className="row my-3">
+            <div className="row mt-3 mb-1 mb-xxxl-3">
               <div className="col-xxxl-7 vstack">
                 <h1 className="h2">
                   <a
@@ -19,7 +19,7 @@ export default function Header() {
                     <span>{import.meta.env.VITE_APP_META_TITLE}</span>
                   </a>
                 </h1>
-                <p className="lead">
+                <p className="lead mb-1 mb-xl-3">
                   Интерактивна верзија на{" "}
                   <a
                     title="Отворете ја страницата „Листа на активни регистри“ на Министерство за образование и наука на Република Северна Македонија"
