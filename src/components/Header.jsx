@@ -15,7 +15,7 @@ export default function Header() {
                     href="./"
                     className="hstack gap-2 align-items-start align-items-md-end link-light link-underline link-underline-opacity-50 gap-4 link-offset-1"
                   >
-                    <i className="bi bi-mortarboard display-1"></i>
+                    <i className="bi bi-mortarboard display-3"></i>
                     <span>{import.meta.env.VITE_APP_META_TITLE}</span>
                   </a>
                 </h1>
