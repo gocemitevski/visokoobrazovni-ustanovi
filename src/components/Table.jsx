@@ -67,7 +67,7 @@ export default function Table({ tableData }) {
                         value={filters[Object.keys(filters)[7]]}
                       ></input>
                       {!filters[Object.keys(filters)[7]] && (
-                        <span class="input-group-text">
+                        <span className="input-group-text">
                           <i className="bi bi-search"></i>
                         </span>
                       )}
@@ -92,7 +92,7 @@ export default function Table({ tableData }) {
                         </button>
                       )}
                     </div>
-                    <div class="form-text mx-3 pt-2">
+                    <div className="form-text mx-3 pt-2">
                       Пребарајте низ сите високообразовни установи во регистарот
                       со едноставни поими како:{" "}
                       <em>
