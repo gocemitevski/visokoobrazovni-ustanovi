@@ -159,7 +159,7 @@ export default function Table({ tableData }) {
                         key > 0 &&
                         key < 6 && (
                           <td key={key}>
-                            <div className="hstack justify-content-between align-items-start gap-3">
+                            <div className="hstack justify-content-between align-items-start gap-3 tw-balance">
                               {key === 2 && Object.values(row)[6] ? (
                                 <a
                                   className="link-body-emphasis"
@@ -168,6 +168,7 @@ export default function Table({ tableData }) {
                                   href={Object.values(row)[6]}
                                 >
                                   {row[filter]}
+                                  <i className="bi bi-box-arrow-up-right fs-xs opacity-50 ms-2"></i>
                                 </a>
                               ) : (
                                 <span>{row[filter]}</span>
