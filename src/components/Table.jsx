@@ -58,6 +58,9 @@ export default function Table({ tableData }) {
                 <td colSpan={8} className="pb-1 border-0" scope="col">
                   <form>
                     <div className="input-group flex-fill">
+                      <span class="input-group-text">
+                        <i className="bi bi-search"></i>
+                      </span>
                       <input
                         id={`search`}
                         className="form-control form-control-lg"
