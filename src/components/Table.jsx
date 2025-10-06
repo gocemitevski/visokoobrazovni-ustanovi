@@ -85,7 +85,7 @@ export default function Table({ tableData }) {
                         <i className="bi bi-x-lg"></i>
                       </button>
                     </div>
-                    <div class="form-text">
+                    <div class="form-text mx-3 pt-2">
                       Пребарајте низ сите високообразовни установи во регистарот
                       со едноставни поими како:{" "}
                       <em>
