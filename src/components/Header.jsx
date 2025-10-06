@@ -10,7 +10,7 @@ export default function Header() {
           <div className="col-xxxl-10 offset-xxxl-1">
             <div className="row my-3">
               <div className="col-xxxl-7 vstack">
-                <h1>
+                <h1 className="h2">
                   <a
                     href="./"
                     className="hstack gap-2 align-items-start align-items-md-end link-light link-underline link-underline-opacity-50 gap-4 link-offset-1"
