@@ -52,6 +52,9 @@
 @import "bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
+// Custom SCSS
+@import "custom";
+
 // Bootstrap Icons
 $bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
