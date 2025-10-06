@@ -616,6 +616,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xs:                $font-size-base * .725 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
@@ -643,6 +644,8 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  xs: $font-size-xs,
+  sm: $font-size-sm,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
