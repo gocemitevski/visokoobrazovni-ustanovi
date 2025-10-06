@@ -8,18 +8,18 @@ export default function Header() {
       <header className="container-fluid">
         <div className="row">
           <div className="col-xxxl-10 offset-xxxl-1">
-            <div className="row my-xxxl-4 g-3">
-              <div className="col-xxxl-6">
-                <h1 className="mb-3">
+            <div className="row my-3">
+              <div className="col-xxxl-7 vstack">
+                <h1>
                   <a
                     href="./"
-                    className="hstack link-light link-underline link-underline-opacity-50 gap-4 link-offset-1"
+                    className="hstack gap-2 align-items-start align-items-md-end link-light link-underline link-underline-opacity-50 gap-4 link-offset-1"
                   >
                     <i className="bi bi-mortarboard display-1"></i>
                     <span>{import.meta.env.VITE_APP_META_TITLE}</span>
                   </a>
                 </h1>
-                <p className="lead mb-4">
+                <p className="lead">
                   Интерактивна верзија на{" "}
                   <a
                     title="Отворете ја страницата „Листа на активни регистри“ на Министерство за образование и наука на Република Северна Македонија"
@@ -35,7 +35,7 @@ export default function Header() {
                   <strong>прочистени и збогатени податоци</strong>.
                 </p>
               </div>
-              <div className="col-xxxl-4 offset-xxxl-2 vstack">
+              <div className="col-xxxl-4 offset-xxxl-1 vstack">
                 {socialLinks.length ? (
                   <ul className="nav justify-content-end flex-fill">
                     {socialLinks.map((icon, key) => (
