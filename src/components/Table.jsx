@@ -137,8 +137,8 @@ export default function Table({ tableData }) {
                     data={results}
                     filters={filters}
                     index={`4`}
-                    title={`Тип`}
-                    titlePlural={`Типови`}
+                    title={`Статус`}
+                    titlePlural={`Статуси`}
                   />
                 </td>
                 <td className="col-xl-2 pb-1 border-0" scope="col">
