@@ -61,7 +61,7 @@ export default function Table({ tableData }) {
         searchData={searchData}
       />
       {tableData.length ? (
-        <div className="table-responsive-md">
+        <div className="table-responsive-lg">
           <table className="table table-striped">
             <thead className="sticky-top">
               <tr>
