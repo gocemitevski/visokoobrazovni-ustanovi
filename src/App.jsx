@@ -32,7 +32,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <div className="container-fluid flex-fill">
+      <div className="container-fluid flex-fill mb-3">
         <div className="row my-3">
           <div className="col-xxxl-10 offset-xxxl-1">
             <Table tableData={sheets} />
