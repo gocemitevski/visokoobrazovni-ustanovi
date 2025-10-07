@@ -36,7 +36,7 @@ export default function Header() {
                 </p>
               </div>
               <div className="col-xl-4 col-xxl-5 col-xxxl-6">
-                <div className="hstack justify-content-end gap-3">
+                <div className="hstack justify-content-xl-end gap-3">
                   <button
                     className="btn btn-sm btn-outline-light"
                     data-bs-target="#zaIzrabotkata"
