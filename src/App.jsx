@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Table from "./components/Table";
 import Footer from "./components/Footer";
 import CookieConsent from "react-cookie-consent";
+import ZaIzrabotkata from "./components/ZaIzrabotkata";
 
 function App() {
   const [sheets, setSheets] = useState([]);
@@ -39,6 +40,7 @@ function App() {
         </div>
       </div>
       <Footer />
+      <ZaIzrabotkata />
       <CookieConsent
         location="bottom"
         buttonText="Во ред"

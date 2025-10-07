@@ -9,7 +9,7 @@ export default function Header() {
         <div className="row">
           <div className="col-xxxl-10 offset-xxxl-1">
             <div className="row mt-3 mb-1 mb-xxxl-3">
-              <div className="col-xl-9 col-xxl-7 vstack">
+              <div className="col-xl-8 col-xxl-7 col-xxxl-6 vstack">
                 <h1 className="h2">
                   <a
                     href="./"
@@ -35,26 +35,37 @@ export default function Header() {
                   <strong>прочистени и збогатени податоци</strong>.
                 </p>
               </div>
-              <div className="col-xl-3 col-xxl-4 offset-xxl-1 vstack">
-                {socialLinks.length ? (
-                  <ul className="nav justify-content-end flex-fill">
-                    {socialLinks.map((icon, key) => (
-                      <li key={key} className="nav-item">
-                        <a
-                          title={`Сподели на ${icon.title}`}
-                          href={icon.href}
-                          target="_blank"
-                          rel="noopener"
-                          className="nav-link link-light"
-                        >
-                          <i className={`bi ${icon.icon}`}></i>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  ``
-                )}
+              <div className="col-xl-4 col-xxl-5 col-xxxl-6">
+                <div className="hstack justify-content-end gap-3">
+                  <button
+                    className="btn btn-sm btn-outline-light"
+                    data-bs-target="#zaIzrabotkata"
+                    data-bs-toggle="offcanvas"
+                    role="button"
+                    aria-controls="zaIzrabotkata"
+                  >
+                    За изработката
+                  </button>
+                  {socialLinks.length ? (
+                    <ul className="nav justify-content-end">
+                      {socialLinks.map((icon, key) => (
+                        <li key={key} className="nav-item">
+                          <a
+                            title={`Сподели на ${icon.title}`}
+                            href={icon.href}
+                            target="_blank"
+                            rel="noopener"
+                            className="nav-link link-light"
+                          >
+                            <i className={`bi ${icon.icon}`}></i>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    ``
+                  )}
+                </div>
               </div>
             </div>
           </div>
