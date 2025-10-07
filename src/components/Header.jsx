@@ -8,7 +8,7 @@ export default function Header() {
       <header className="container-fluid">
         <div className="row">
           <div className="col-xxxl-10 offset-xxxl-1">
-            <div className="row mt-3 mb-1 mb-xxxl-3">
+            <div className="row mt-xxxl-3 mb-1 mb-xxxl-3">
               <div className="col-xl-8 col-xxl-7 col-xxxl-6 vstack">
                 <h1 className="h2">
                   <a
