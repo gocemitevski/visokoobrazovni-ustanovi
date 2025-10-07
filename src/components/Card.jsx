@@ -9,7 +9,7 @@ export default function Card({ data, filters, index, title, titlePlural }) {
     >
       <div className="card-body">
         <h5
-          className={`card-title ${
+          className={`card-title fs-4 ${
             filters[Object.keys(filters)[index]] ? `text-success` : ``
           }`}
         >
