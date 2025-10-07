@@ -6,7 +6,7 @@ export default function SearchForm({
   searchData,
 }) {
   return (
-    <form className="mt-3 mb-1 mx-3">
+    <form className="mt-3 mb-1 mx-xl-3">
       <div className="input-group flex-fill">
         <input
           id={`search`}
