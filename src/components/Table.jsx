@@ -1,5 +1,7 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import Card from "./Card";
+import NoTableResults from "./NoTableResults";
+import TablePlaceholder from "./TablePlaceholder";
 
 export default function Table({ tableData }) {
   const placeholder = "Изберете...";
@@ -259,36 +261,13 @@ export default function Table({ tableData }) {
                   </tr>
                 ))
               ) : (
-                <tr>
-                  <td colSpan={8} className="table-danger">
-                    <div className="hstack gap-3">
-                      <i className="bi bi-exclamation-square"></i>
-                      <p className="mb-0">
-                        Не постојат високообразовни установи за внесените
-                        параметри или пак, сте направиле некоја грешка при
-                        пребарувањето.
-                      </p>
-                    </div>
-                  </td>
-                </tr>
+                <NoTableResults />
               )}
             </tbody>
           </table>
         </div>
       ) : (
-        <Fragment>
-          <div className="placeholder-glow mt-3">
-            <span className="placeholder col-12" style={{ height: 60 }}></span>
-          </div>
-          <div className="placeholder-glow mt-3">
-            <span className="placeholder col-12" style={{ height: 200 }}></span>
-          </div>
-          {[...Array(8)].map((_, index) => (
-            <p key={index} className="placeholder-glow my-2">
-              <span className="placeholder h-50 col-12"></span>
-            </p>
-          ))}
-        </Fragment>
+        <TablePlaceholder />
       )}
     </Fragment>
   );
