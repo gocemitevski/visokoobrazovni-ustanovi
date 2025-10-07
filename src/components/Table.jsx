@@ -2,6 +2,7 @@ import { Fragment, useEffect, useMemo, useState } from "react";
 import Card from "./Card";
 import NoTableResults from "./NoTableResults";
 import TablePlaceholder from "./TablePlaceholder";
+import SearchForm from "./SearchForm";
 
 export default function Table({ tableData }) {
   const placeholder = "Изберете...";
@@ -52,49 +53,13 @@ export default function Table({ tableData }) {
 
   return (
     <Fragment>
-      <form className="mt-3 mb-1 mx-3">
-        <div className="input-group flex-fill">
-          <input
-            id={`search`}
-            className="form-control form-control-lg"
-            type="text"
-            placeholder="Пребарајте..."
-            onChange={(e) => searchData(e, Object.keys(filters)[7])}
-            value={filters[Object.keys(filters)[7]]}
-          ></input>
-          {!filters[Object.keys(filters)[7]] && (
-            <span className="input-group-text">
-              <i className="bi bi-search"></i>
-            </span>
-          )}
-          {filters[Object.keys(filters)[7]] && (
-            <button
-              className="btn btn-outline-secondary"
-              type="reset"
-              title={
-                filters[Object.keys(filters)[7]]
-                  ? `Избришете`
-                  : `Внесете вредност за да можете да ја избришете`
-              }
-              onClick={() =>
-                setFilters({
-                  ...filters,
-                  [Object.keys(filters)[7]]: "",
-                })
-              }
-              disabled={!filters[Object.keys(filters)[7]]}
-            >
-              <i className="bi bi-x-lg"></i>
-            </button>
-          )}
-        </div>
-        <div className="form-text mx-3 pt-2">
-          Пребарајте низ сите високообразовни установи во регистарот со
-          едноставни поими како:{" "}
-          <em>информатика, Скопје, архитектура, јавна, приватна, институт</em> и
-          сл.
-        </div>
-      </form>
+      <SearchForm
+        value={filters[Object.keys(filters)[7]]}
+        index={Object.keys(filters)[7]}
+        filters={filters}
+        setFilters={setFilters}
+        searchData={searchData}
+      />
       {tableData.length ? (
         <div className="table-responsive-md">
           <table className="table table-striped">
