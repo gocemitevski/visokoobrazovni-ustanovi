@@ -182,12 +182,25 @@ export default function Table({ tableData }) {
                         key < 6 && (
                           <td key={key}>
                             <div className="hstack justify-content-between align-items-start gap-3 tw-balance">
-                              {key === 2 && Object.values(row)[6] ? (
+                              {key <= 2 && row[filter] ? (
                                 <a
                                   className="link-body-emphasis"
                                   target="_blank"
                                   rel="noopener"
-                                  href={Object.values(row)[6]}
+                                  href={
+                                    key === 1
+                                      ? results.find(
+                                          (el) =>
+                                            el[Object.keys(filters)[1]] ===
+                                            row[filter]
+                                        ) &&
+                                        results.find(
+                                          (el) =>
+                                            el[Object.keys(filters)[1]] ===
+                                            row[filter]
+                                        )[Object.keys(filters)[6]]
+                                      : Object.values(row)[6]
+                                  }
                                 >
                                   {row[filter]}
                                   <i className="bi bi-box-arrow-up-right fs-xs opacity-50 ms-2"></i>
