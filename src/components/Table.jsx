@@ -3,19 +3,11 @@ import Card from "./Card";
 import NoTableResults from "./NoTableResults";
 import TablePlaceholder from "./TablePlaceholder";
 import SearchForm from "./SearchForm";
+import { filterDefinitions } from "../utils/filterDefinitions";
 
 export default function Table({ tableData }) {
   const placeholder = "Изберете...";
-  const [filters, setFilters] = useState({
-    "Реден број": "",
-    "Назив на високообразовната установа": "",
-    "Назив на универзитетска единица": "",
-    Седиште: "",
-    "Статус на високообразовната установа": "",
-    "Вид на високообразовната установа": "",
-    "Мрежно место": "",
-    Пребарување: "",
-  });
+  const [filters, setFilters] = useState(filterDefinitions);
   const [filteredData, setFilteredData] = useState([]);
 
   const searchData = (e, column) => {
