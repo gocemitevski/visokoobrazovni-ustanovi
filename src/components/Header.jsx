@@ -13,13 +13,13 @@ export default function Header() {
                 <h1 className="h2">
                   <a
                     href="./"
-                    className="hstack gap-2 align-items-start align-items-md-end link-light link-underline link-underline-opacity-50 gap-4 link-offset-1"
+                    className="hstack flex-wrap flex-sm-nowrap align-items-start align-items-md-end link-light link-underline link-underline-opacity-50 gap-0 gap-sm-3 link-offset-1"
                   >
                     <i className="bi bi-mortarboard display-3"></i>
                     <span>{import.meta.env.VITE_APP_META_TITLE}</span>
                   </a>
                 </h1>
-                <p className="lead mb-1 mb-xl-3">
+                <p className="lead mb-xl-3">
                   Интерактивна верзија на{" "}
                   <a
                     title="Отворете ја страницата „Листа на активни регистри“ на Министерство за образование и наука на Република Северна Македонија"
