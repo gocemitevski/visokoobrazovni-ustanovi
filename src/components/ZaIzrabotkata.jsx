@@ -10,7 +10,7 @@ export default function ZaIzrabotkata() {
       aria-labelledby="zaIzrabotkata"
     >
       <div className="offcanvas-header">
-        <h5 className="offcanvas-title" id="zaIzrabotkata">
+        <h5 className="offcanvas-title">
           За изработката
         </h5>
         <button
