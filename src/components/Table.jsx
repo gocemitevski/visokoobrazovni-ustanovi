@@ -157,6 +157,7 @@ export default function Table({ tableData }) {
                               }
                             >
                               <i className="bi bi-x-lg"></i>
+                              <span className="visually-hidden">Отстрани</span>
                             </button>
                           )}
                         </div>
@@ -200,7 +201,7 @@ export default function Table({ tableData }) {
                                   />
                                 )
                               ) : (
-                                <span>{row[filter]}</span>
+                                <p className="mb-0">{row[filter]}</p>
                               )}
                               {!filter
                                 .toString()
@@ -223,6 +224,7 @@ export default function Table({ tableData }) {
                                       className="btn btn-outline-secondary"
                                     >
                                       <i className="bi bi-search"></i>
+                                      <span className="visually-hidden">{`Избери`}</span>
                                     </button>
                                   )
                                 : ``}

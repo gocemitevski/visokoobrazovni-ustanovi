@@ -27,7 +27,7 @@ export default function SearchForm({
             type="reset"
             title={
               value
-                ? `Избришете`
+                ? `Избриши`
                 : `Внесете вредност за да можете да ја избришете`
             }
             onClick={() =>
@@ -39,6 +39,7 @@ export default function SearchForm({
             disabled={!value}
           >
             <i className="bi bi-x-lg"></i>
+            <span className="visually-hidden">Избриши</span>
           </button>
         )}
       </div>

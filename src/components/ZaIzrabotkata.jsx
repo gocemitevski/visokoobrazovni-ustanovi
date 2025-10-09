@@ -7,10 +7,10 @@ export default function ZaIzrabotkata() {
       className="offcanvas offcanvas-end"
       tabIndex="-1"
       id="zaIzrabotkata"
-      aria-labelledby="staticBackdropLabel"
+      aria-labelledby="zaIzrabotkata"
     >
       <div className="offcanvas-header">
-        <h5 className="offcanvas-title" id="staticBackdropLabel">
+        <h5 className="offcanvas-title" id="zaIzrabotkata">
           За изработката
         </h5>
         <button
@@ -18,7 +18,9 @@ export default function ZaIzrabotkata() {
           className="btn-close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
-        ></button>
+        >
+          <span className="visually-hidden">Затвори</span>
+        </button>
       </div>
       <div className="offcanvas-body">
         <div className="row g-0">

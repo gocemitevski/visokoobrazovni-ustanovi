@@ -58,6 +58,7 @@ export default function Header() {
                             className="nav-link link-light"
                           >
                             <i className={`bi ${icon.icon}`}></i>
+                            <span className="visually-hidden">{`Сподели на ${icon.title}`}</span>
                           </a>
                         </li>
                       ))}

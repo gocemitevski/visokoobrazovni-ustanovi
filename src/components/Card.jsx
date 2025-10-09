@@ -8,13 +8,13 @@ export default function Card({ data, filters, index, title, titlePlural }) {
       } bg-light`}
     >
       <div className="card-body">
-        <h5
+        <h2
           className={`card-title fs-4 ${
             filters[Object.keys(filters)[index]] ? `text-success` : ``
           }`}
         >
           {count(data, filters, index)}
-        </h5>
+        </h2>
         <p className="card-text">
           {count(data, filters, index) % 10 === 1 && count(data, filters, 1)
             ? title

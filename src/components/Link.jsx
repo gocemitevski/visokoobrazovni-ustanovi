@@ -7,7 +7,9 @@ export default function Link({ href, value }) {
       href={href}
     >
       <span>{value}</span>
-      <i className="bi bi-box-arrow-up-right fs-xs opacity-50 ms-2"></i>
+      <p className="d-inline-flex mb-0">
+        <i className="bi bi-box-arrow-up-right fs-xs opacity-50 ms-2"></i>
+      </p>
     </a>
   ) : (
     <span>{value}</span>
