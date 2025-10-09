@@ -1,3 +1,8 @@
+// @fontsource dependencies
+@use "sass:map";
+@use "@fontsource-utils/scss" as fontsource;
+
+
 @import "bootstrap/scss/mixins/banner";
 @include bsBanner("");
 
@@ -60,4 +65,5 @@ $bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
 
 // Noto Sans Variable
-@import "@fontsource-variable/noto-sans/index.css";
+@import "font-metadata";
+@include fontsource.generator($metadata);

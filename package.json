@@ -11,6 +11,7 @@
     "preview": "vite build && vite preview"
   },
   "dependencies": {
+    "@fontsource-utils/scss": "^0.2.2",
     "@fontsource-variable/noto-sans": "^5.2.10",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
