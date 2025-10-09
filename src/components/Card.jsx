@@ -5,7 +5,7 @@ export default function Card({ data, filters, index, title, titlePlural }) {
     <div
       className={`card ${
         filters[Object.keys(filters)[index]] || filters[Object.keys(filters)[7]]
-          ? `border-success border-2`
+          ? `${data.length ? `border-success` : `border-danger`} border-2`
           : ``
       } bg-light`}
     >
@@ -14,7 +14,7 @@ export default function Card({ data, filters, index, title, titlePlural }) {
           className={`card-title fs-4 ${
             filters[Object.keys(filters)[index]] ||
             filters[Object.keys(filters)[7]]
-              ? `text-success`
+              ? `${data.length ? `text-success` : `text-danger`}`
               : ``
           }`}
         >
